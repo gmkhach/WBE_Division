@@ -33,7 +33,6 @@ namespace WBE_Division
         static int Division(int numerator, int denominator)
         {
             int result = 0;
-
             if (denominator == 0)
             {
                 // division by 0 is infinity because you can subtract 0 form any number infinit times.
@@ -52,10 +51,12 @@ namespace WBE_Division
                 }
             }
             // determines the sign of the result.
+            // if both numbers are either positive or negative the result is positive. 
             if (numerator <= 0 && denominator < 0 || numerator >= 0 && denominator > 0)
             {
                 return result;
             }
+            // otherwise one of the numbers is negatie, which will yield a negative result.
             else
             {
                 return 0 - result;
