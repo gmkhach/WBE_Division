@@ -38,26 +38,25 @@ namespace WBE_Division
             {
                 throw new Exception("\nDivision over zero. The result is infinity.");
             }
-            else if (numerator <=0 && denominator < 0 || numerator >=0 && denominator > 0)
+            else
             {
-                while (numerator >= denominator)
+                int a = Math.Abs(numerator);
+                int b = Math.Abs(denominator);
+                while (a >= b)
                 {
-                    numerator -= denominator;
+                    a -= b;
                     result++;
                 }
             }
-            else if (numerator >= 0 && denominator < 0 || numerator <= 0 && denominator > 0)
-            {
-                numerator = Math.Abs(numerator);
-                denominator = Math.Abs(denominator);
-                while (numerator >= denominator)
-                {
-                    numerator -= denominator;
-                    result--;
-                }
-            }
 
-            return result;
+            if (numerator <= 0 && denominator < 0 || numerator >= 0 && denominator > 0)
+            {
+                return result;
+            }
+            else
+            {
+                return 0 - result;
+            }
         }
     }
 }
