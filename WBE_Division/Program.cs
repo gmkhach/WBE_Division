@@ -36,19 +36,22 @@ namespace WBE_Division
 
             if (denominator == 0)
             {
+                // division by 0 is infinity because you can subtract 0 form any number infinit times.
                 throw new Exception("\nDivision over zero. The result is infinity.");
             }
             else
             {
+                // stripping the ints from their signs to simplify the process.
                 int a = Math.Abs(numerator);
                 int b = Math.Abs(denominator);
+                // division by subtraction
                 while (a >= b)
                 {
                     a -= b;
                     result++;
                 }
             }
-
+            // determines the sign of the result.
             if (numerator <= 0 && denominator < 0 || numerator >= 0 && denominator > 0)
             {
                 return result;
