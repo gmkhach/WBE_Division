@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * Write a function that accepts two ints a and b, and returns a/b. Must be implemented without using the division or modulo operators
+ * ie: 7, 2 should return 3
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
