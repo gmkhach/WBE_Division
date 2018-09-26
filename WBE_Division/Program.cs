@@ -33,10 +33,18 @@ namespace WBE_Division
         static int Division(int numerator, int denominator)
         {
             int result = 0;
-            while(numerator >= denominator)
+
+            if (denominator == 0)
             {
-                numerator -= denominator;
-                result++;
+                throw new Exception("\nDivision over zero. The result is infinity.");
+            }
+            else
+            {
+                while (numerator >= denominator)
+                {
+                    numerator -= denominator;
+                    result++;
+                }
             }
             return result;
         }
