@@ -10,6 +10,18 @@ namespace WBE_Division
     {
         static void Main(string[] args)
         {
+
+        }
+
+        static int Division(int numerator, int denominator)
+        {
+            int result = 0;
+            while(numerator >= denominator)
+            {
+                numerator -= denominator;
+                result++;
+            }
+            return result;
         }
     }
 }
