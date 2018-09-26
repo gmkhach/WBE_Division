@@ -10,7 +10,24 @@ namespace WBE_Division
     {
         static void Main(string[] args)
         {
-
+            do
+            {
+                try
+                {
+                    Console.Write("\nEnter the numerator\n\n>>> ");
+                    int numerator = int.Parse(Console.ReadLine().Trim());
+                    Console.Write("\nEnter the denominator\n\n>>> ");
+                    int denominator = int.Parse(Console.ReadLine().Trim());
+                    Console.WriteLine($"\nResult: {Division(numerator, denominator)}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                Console.Write("\nPress Enter to do another division...");
+                Console.ReadLine();
+                Console.Clear();
+            } while (true);
         }
 
         static int Division(int numerator, int denominator)
