@@ -38,7 +38,7 @@ namespace WBE_Division
             {
                 throw new Exception("\nDivision over zero. The result is infinity.");
             }
-            else
+            else if (numerator <=0 && denominator < 0 || numerator >=0 && denominator > 0)
             {
                 while (numerator >= denominator)
                 {
@@ -46,6 +46,17 @@ namespace WBE_Division
                     result++;
                 }
             }
+            else if (numerator >= 0 && denominator < 0 || numerator <= 0 && denominator > 0)
+            {
+                numerator = Math.Abs(numerator);
+                denominator = Math.Abs(denominator);
+                while (numerator >= denominator)
+                {
+                    numerator -= denominator;
+                    result--;
+                }
+            }
+
             return result;
         }
     }
