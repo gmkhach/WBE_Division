@@ -43,13 +43,10 @@ namespace WBE_Division
             }
             else
             {
-                // stripping the ints from their signs to simplify the process.
-                int a = Math.Abs(numerator);
-                int b = Math.Abs(denominator);
                 // division by subtraction
-                while (a >= b)
+                while (Math.Abs(numerator) >= Math.Abs(denominator))
                 {
-                    a -= b;
+                    numerator -= denominator;
                     result++;
                 }
             }
