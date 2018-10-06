@@ -55,15 +55,8 @@ namespace WBE_Division
             }
             // determines the sign of the result.
             // if both numbers are either positive or negative the result is positive. 
-            if (numerator <= 0 && denominator < 0 || numerator >= 0 && denominator > 0)
-            {
-                return result;
-            }
             // otherwise one of the numbers is negatie, which will yield a negative result.
-            else
-            {
-                return 0 - result;
-            }
+            return (numerator <= 0 && denominator < 0 || numerator >= 0 && denominator > 0) ? result : 0 - result;
         }
     }
 }
