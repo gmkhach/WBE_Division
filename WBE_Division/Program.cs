@@ -19,11 +19,9 @@ namespace WBE_Division
             {
                 try
                 {
-                    Console.Write("\nEnter the numerator\n\n>>> ");
-                    int numerator = int.Parse(Console.ReadLine().Trim());
-                    Console.Write("\nEnter the denominator\n\n>>> ");
-                    int denominator = int.Parse(Console.ReadLine().Trim());
-                    Console.WriteLine($"\nResult: {Division(numerator, denominator)}");
+                    Console.Write("\nEnter the numerator comma denominator\n\n>>> ");
+                    string[] input = Console.ReadLine().Split(',');
+                    Console.WriteLine($"\nResult: {Division(int.Parse(input[0].Trim()), int.Parse(input[1].Trim()))}");
                 }
                 catch (Exception ex)
                 {
